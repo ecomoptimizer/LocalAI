@@ -1,12 +1,12 @@
-name: mistral-openorca
+name: dolphin-mistral
 config_file: |
-  name: mistral-openorca
+  name: dolphin-mistral
   context_size: 6144
   f16: true
   mmap: true
   threads: 4
   parameters:
-    model: huggingface://TheBloke/Mistral-7B-OpenOrca-GGUF/mistral-7b-openorca.Q5_K_S.gguf
+    model: huggingface://TheBloke/dolphin-2.6-mistral-7B-GGUF/dolphin-2.6-mistral-7b.Q5_K_M.gguf
     temperature: 0.5
     top_k: 40
     top_p: 0.95
@@ -26,9 +26,9 @@ config_file: |
   - <dummy32000>
   
   files:
-  - filename: "mistral-7b-openorca.Q5_K_S.gguf"
-    sha256: "57f4e4207ba3b6d88f681beb93e3e3a58c6f4e8170fdc5643913d7da24fc59c6"
-    uri: "https://huggingface.co/TheBloke/Mistral-7B-OpenOrca-GGUF/resolve/main/mistral-7b-openorca.Q5_K_S.gguf"
+  - filename: "dolphin-2.6-mistral-7b.Q5_K_M.gguf"
+    sha256: "e4ce9eabae27e45131c3d0d99223f133b96257301670073b3aee50f7627e20b2"
+    uri: "https://huggingface.co/TheBloke/dolphin-2.6-mistral-7B-GGUF/resolve/main/dolphin-2.6-mistral-7b.Q5_K_M.gguf"
   
   usage: |
         curl http://localhost:8080/v1/chat/completions -H "Content-Type: application/json" -d '{
